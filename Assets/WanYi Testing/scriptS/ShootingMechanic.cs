@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class ShootingMechanic : MonoBehaviour
 {
-    public Transform camTransform;
-    public GameObject arrowPrefab;
-    public Transform arrowSpawnPoint;
+    [Header("References")]
+    public Transform cam;
+    public Transform attackPoint;
+    public GameObject loveArrow;
 
-    //public GameObject parentObject;
+    [Header("Settings")]
+    public float shootingCD;
 
-    public float shootForce = 30f;
-    public float timeCoolDown;
+    [Header("Shooting")]
+    public KeyCode shootingKey = KeyCode.Mouse0;
+    public float shootingForce;
+    public float shootingUpwardForce;
 
-    public float destroyTime = 3f;
+    bool readyToShoot;
 
-    bool readyToShoot = true;
+    private void Start()
+    {
+        readyToShoot = true;
+    }
 
-    // Update is called once per frame
     private void Update()
     {
-        if(Input.GetButtonDown("Fire1") && readyToShoot)
+        if (Input.GetKeyDown(shootingKey) && readyToShoot)
         {
             Shoot();
         }
@@ -28,34 +34,52 @@ public class ShootingMechanic : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject loveArrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, arrowSpawnPoint.transform.rotation);
-        loveArrow.transform.parent = arrowSpawnPoint.transform;
+        GameObject arrow = Instantiate(loveArrow, attackPoint.position, cam.rotation);
 
-        Rigidbody rb = loveArrow.GetComponent<Rigidbody>();
-        Vector3 shootingDir = camTransform.forward;
-        
-        rb.velocity = shootingDir * shootForce;
+        Rigidbody arrowRb = arrow.GetComponent<Rigidbody>();
 
-        // Start the shooting cooldown timer
-        readyToShoot = false;
-        Invoke("ResetShoot", timeCoolDown);
-        Destroy(loveArrow, destroyTime);
+        Vector3 forceToAdd = cam.transform.forward * shootingForce + transform.up * shootingUpwardForce;
+
+        arrowRb.AddForce(forceToAdd, ForceMode.Impulse);
+
+        Invoke("ResetShoot", shootingCD);
     }
     private void ResetShoot()
     {
-        readyToShoot = true;
+        readyToShoot = false;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    /*public GameObject arrowPrefab;
+    public Transform shootPoint;
+    public float arrowSpeed = 10f;
+
+    private Camera mainCamera;
+
+    void Start()
     {
-        if (collision.gameObject.tag != "Player")
+        mainCamera = Camera.main;
+    }
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
         {
-            Rigidbody rb = GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.velocity = Vector3.zero;
-                rb.isKinematic = true;
-            }
+            ShootArrow();
         }
     }
+
+    void ShootArrow()
+    {
+        // Instantiate arrow object
+        GameObject arrow = Instantiate(arrowPrefab, shootPoint.position, Quaternion.identity);
+
+        // Calculate arrow direction
+        Vector3 arrowDirection = mainCamera.transform.forward + transform.forward;
+        arrowDirection.Normalize();
+
+        // Apply force to arrow
+        Rigidbody arrowRigidbody = arrow.GetComponent<Rigidbody>();
+        arrowRigidbody.AddForce(arrowDirection * arrowSpeed, ForceMode.Impulse);
+    }*/
+
 }
