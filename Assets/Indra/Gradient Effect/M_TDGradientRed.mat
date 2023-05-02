@@ -50,7 +50,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Tiling: 0.87
+    - _Tiling: 2
     m_Colors:
     - _Color1: {r: 0.5019608, g: 0.007843138, b: 0, a: 0}
     - _Color2: {r: 1, g: 0.25882354, b: 0.29411766, a: 0}
