@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootingMechanic : MonoBehaviour
 {
-    [Header("References")]
+    /*[Header("References")]
     public Transform cam;
     public Transform attackPoint;
     public GameObject loveArrow;
@@ -47,7 +47,7 @@ public class ShootingMechanic : MonoBehaviour
     private void ResetShoot()
     {
         readyToShoot = false;
-    }
+    }*/
 
     /*public GameObject arrowPrefab;
     public Transform shootPoint;
@@ -82,4 +82,57 @@ public class ShootingMechanic : MonoBehaviour
         arrowRigidbody.AddForce(arrowDirection * arrowSpeed, ForceMode.Impulse);
     }*/
 
+    public Transform camTransform;
+    public GameObject arrowPrefab;
+    public Transform arrowSpawnPoint;  // the arrow prefab's game object
+
+    public float shootForce = 30f;
+    public float timeCoolDown;
+
+    public float destroyTime = 3f;
+
+    bool readyToShoot = true;
+
+    // Update is called once per frame
+    private void Update()
+    {
+        if (Input.GetButtonDown("Fire1") && readyToShoot)
+        {
+            Shoot();
+        }
+    }
+
+    private void Shoot()
+    {
+        //GameObject loveArrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, arrowSpawnPoint.transform.rotation);
+        GameObject loveArrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
+        loveArrow.transform.parent = arrowSpawnPoint.transform;
+
+        Rigidbody rb = loveArrow.GetComponent<Rigidbody>();
+        Vector3 shootingDir = camTransform.forward;
+
+        rb.velocity = shootingDir * shootForce;
+
+        // Start the shooting cooldown timer
+        readyToShoot = false;
+        Invoke("ResetShoot", timeCoolDown);
+        Destroy(loveArrow, destroyTime);
+    }
+    private void ResetShoot()
+    {
+        readyToShoot = true;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag != "Player")
+        {
+            Rigidbody rb = GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.velocity = Vector3.zero;
+                rb.isKinematic = true;
+            }
+        }
+    }
 }
