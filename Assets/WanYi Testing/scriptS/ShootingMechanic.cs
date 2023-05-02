@@ -106,12 +106,13 @@ public class ShootingMechanic : MonoBehaviour
     private void Shoot()
     {
         //GameObject loveArrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, arrowSpawnPoint.transform.rotation);
-        GameObject loveArrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.identity);
+        GameObject loveArrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, Quaternion.Euler(-90f, 0f, 0f));
         loveArrow.transform.parent = arrowSpawnPoint.transform;
 
         Rigidbody rb = loveArrow.GetComponent<Rigidbody>();
         Vector3 shootingDir = camTransform.forward;
-
+        Quaternion arrowRotation = Quaternion.LookRotation(Vector3.up, shootingDir);
+        loveArrow.transform.rotation = arrowRotation * Quaternion.Euler(0f, 0f, 0f);
         rb.velocity = shootingDir * shootForce;
 
         // Start the shooting cooldown timer
