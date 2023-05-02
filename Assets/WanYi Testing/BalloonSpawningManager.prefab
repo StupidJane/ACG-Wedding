@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6633479524772025160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6633479524772025142}
+  - component: {fileID: 6633479524772025161}
+  m_Layer: 0
+  m_Name: BalloonSpawningManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6633479524772025142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633479524772025160}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.22, y: 3.3382936, z: -4.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6633479524772025161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633479524772025160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfcd88146a3f639479dccb088d32df7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balloonPrefabs:
+  - {fileID: 3903523098469593297, guid: d6a7ba33c3b93f849b0eaee2ebae6604, type: 3}
+  - {fileID: 4127660290088904111, guid: b04ef0e59f6e0aa41b65cb0ba799a05f, type: 3}
+  - {fileID: 8032144541748263973, guid: 8ca9e1916b3ebe94780b52032af8877a, type: 3}
+  - {fileID: 1113065767535702385, guid: 2cc3308215f91c749bafc7df3be218d4, type: 3}
+  numBalloons: 25
+  spawnRadius: 15
+  maxTotalBalloons: 30
+  spawnAreaCenter: {x: 10, y: 5, z: 10}
+  spawnAreaSize: {x: 10, y: 5, z: 10}

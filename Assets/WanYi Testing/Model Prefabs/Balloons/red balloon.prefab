@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2552873461796157086}
   m_Layer: 0
   m_Name: Balloon_LOD0
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4405071373434900360}
   m_Layer: 0
   m_Name: Balloon_LOD2
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 4297490106861641269}
   m_Layer: 0
   m_Name: Balloon_LOD1
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,9 +259,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7222709797333706399}
   - component: {fileID: 2478712497905963502}
+  - component: {fileID: 648691101}
+  - component: {fileID: 648691104}
   m_Layer: 0
   m_Name: red balloon
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -312,6 +314,31 @@ LODGroup:
     renderers:
     - renderer: {fileID: 4405071373434900360}
   m_Enabled: 1
+--- !u!65 &648691101
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032144541748263973}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5227894, y: 0.4469007, z: 0.17034903}
+  m_Center: {x: -0.021433493, y: -1.0696769, z: 0.007826935}
+--- !u!114 &648691104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8032144541748263973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a7e0deb23f5654cbab0508e65de22a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4699529073058190366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -378,6 +405,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CalmStarFieldRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079353729398404772, guid: b49c4633bfdb0ec46b46f1180c0bea1c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Balloon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b49c4633bfdb0ec46b46f1180c0bea1c, type: 3}

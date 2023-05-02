@@ -136,5 +136,11 @@ public class ShootingMechanic : MonoBehaviour
                 rb.isKinematic = true;
             }
         }
+
+        /*if (collision.gameObject.tag == "Balloon")
+        {
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }*/
     }
 }

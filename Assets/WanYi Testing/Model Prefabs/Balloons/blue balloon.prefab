@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 4424726431645280875}
   - component: {fileID: 8880489981214268698}
   - component: {fileID: 6010487173024149043}
+  - component: {fileID: 410968780}
+  - component: {fileID: 410968784}
   m_Layer: 0
   m_Name: blue balloon
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,6 +80,31 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &410968780
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3903523098469593297}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.49941978, y: 0.45211792, z: 0.16513112}
+  m_Center: {x: -0.0031897721, y: -1.0775032, z: 0.00000006953875}
+--- !u!114 &410968784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3903523098469593297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a7e0deb23f5654cbab0508e65de22a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4812968858987002188
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +119,7 @@ GameObject:
   - component: {fileID: 9126451009048708336}
   m_Layer: 0
   m_Name: Balloon_LOD1
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,7 +217,7 @@ GameObject:
   - component: {fileID: 3765004531721423776}
   m_Layer: 0
   m_Name: Balloon_LOD2
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -288,7 +315,7 @@ GameObject:
   - component: {fileID: 4938842325098850420}
   m_Layer: 0
   m_Name: Balloon_LOD0
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -468,6 +495,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CalmStarFieldBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079353729398404772, guid: c26c207a2d599ce40baef226266aedd3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Balloon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c26c207a2d599ce40baef226266aedd3, type: 3}
