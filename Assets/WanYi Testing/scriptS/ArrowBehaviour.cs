@@ -14,5 +14,10 @@ public class ArrowBehaviour : MonoBehaviour
             BalloonSpawning spawner = FindObjectOfType<BalloonSpawning>();
             spawner.BalloonDestroyed(gameObject);
         }
+
+        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "Balloon" )
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

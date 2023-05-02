@@ -125,7 +125,7 @@ public class ShootingMechanic : MonoBehaviour
         readyToShoot = true;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag != "Player")
         {
@@ -142,5 +142,5 @@ public class ShootingMechanic : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
         }*/
-    }
+    //}
 }
