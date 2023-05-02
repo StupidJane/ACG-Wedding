@@ -8,6 +8,7 @@ public class PlayerCamera : MonoBehaviour
     public float sensY;
 
     public Transform orientation;
+    public Transform arrowSpawnPoint;
 
     float yRot;
     float xRot;
@@ -31,5 +32,7 @@ public class PlayerCamera : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(xRot, yRot, 0);
         orientation.rotation = Quaternion.Euler(0, yRot, 0);
+
+        arrowSpawnPoint.rotation = Quaternion.Euler(xRot, 0, 0);
     }
 }

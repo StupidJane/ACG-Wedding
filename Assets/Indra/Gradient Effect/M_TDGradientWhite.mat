@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_TDGradientRed
+  m_Name: M_TDGradientWhite
   m_Shader: {fileID: -6465566751694194690, guid: 0d76f6817a5cc2c43852d36b47c9d67e,
     type: 3}
   m_ValidKeywords: []
@@ -50,9 +50,9 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Tiling: 2
-    - _VoronoiTiling: 20
+    - _Tiling: 0
+    - _VoronoiTiling: 7.8
     m_Colors:
-    - _Color1: {r: 0.48048034, g: 0.49019608, b: 0, a: 0}
-    - _Color2: {r: 0.96447307, g: 0.030935865, b: 0.07538985, a: 0}
+    - _Color1: {r: 1, g: 1, b: 1, a: 0}
+    - _Color2: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 0}
   m_BuildTextureStacks: []

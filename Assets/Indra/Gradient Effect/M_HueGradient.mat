@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5273122633329938968
+--- !u!114 &-3503503666487639010
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_TDGradientRed
-  m_Shader: {fileID: -6465566751694194690, guid: 0d76f6817a5cc2c43852d36b47c9d67e,
+  m_Name: M_HueGradient
+  m_Shader: {fileID: -6465566751694194690, guid: f428dfa4ab996c34bbfdf8a9d098ef25,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -50,9 +50,9 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Tiling: 2
-    - _VoronoiTiling: 20
+    - _Tiling: 0.69
+    - _VoronoiTiling: 7.7
     m_Colors:
-    - _Color1: {r: 0.48048034, g: 0.49019608, b: 0, a: 0}
-    - _Color2: {r: 0.96447307, g: 0.030935865, b: 0.07538985, a: 0}
+    - _Color1: {r: 0, g: 0.04705882, b: 1, a: 0}
+    - _Color2: {r: 0, g: 1, b: 0.9333333, a: 0}
   m_BuildTextureStacks: []
