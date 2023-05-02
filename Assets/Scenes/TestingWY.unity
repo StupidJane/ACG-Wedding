@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.64907485, g: 0.6911994, b: 0.68366766, a: 1}
+  m_IndirectSpecularColor: {r: 0.6499779, g: 0.6918089, b: 0.68398523, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6120,6 +6120,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 937348971583452988, guid: ba76f0562dc2eac41970e644533beab9,
     type: 3}
   m_PrefabInstance: {fileID: 231462370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &237140529 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7534678255084484432, guid: 7d7123000f5b17f438e1b195e3243f43,
+    type: 3}
+  m_PrefabInstance: {fileID: 7534678255337236265}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &241396514
 GameObject:
@@ -13327,6 +13333,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 538573524}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &542979617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6878086561186565506, guid: f484ca709e9c6b74bbc2e8c678eb9994,
+    type: 3}
+  m_PrefabInstance: {fileID: 6878086561007983308}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &542979618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542979617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ba8527fe7f8bc459e7dca354a1c4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camTransform: {fileID: 237140529}
+  arrowPrefab: {fileID: 1570189191300725995, guid: 571d9f3dacfff684eb44f4aa531b6058,
+    type: 3}
+  arrowSpawnPoint: {fileID: 2079377873}
+  shootForce: 30
+  timeCoolDown: 0.5
+  destroyTime: 1
 --- !u!1001 &543153978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49920,6 +49951,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2076459942}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2079377872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2079377873}
+  m_Layer: 0
+  m_Name: ArrowSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2079377873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079377872}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.47399998, z: 0.83}
+  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 237140529}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2080314871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52599,6 +52661,11 @@ PrefabInstance:
       propertyPath: orientation
       value: 
       objectReference: {fileID: 1514330217}
+    - target: {fileID: 7534678255084484434, guid: 7d7123000f5b17f438e1b195e3243f43,
+        type: 3}
+      propertyPath: arrowSpawnPoint
+      value: 
+      objectReference: {fileID: 2079377873}
     - target: {fileID: 7534678255084484435, guid: 7d7123000f5b17f438e1b195e3243f43,
         type: 3}
       propertyPath: m_RenderPostProcessing
