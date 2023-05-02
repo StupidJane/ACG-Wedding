@@ -8,6 +8,8 @@ public class PlayerInteraction : MonoBehaviour
 
     public float range = 50f;
 
+    public Material[] skybox;
+
     void Start()
     {
         Cam = Camera.main.transform;
@@ -18,6 +20,19 @@ public class PlayerInteraction : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             Interact();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            if (RenderSettings.skybox == skybox[0])
+            {
+                RenderSettings.skybox = skybox[1];
+            }
+            else
+            {
+                RenderSettings.skybox = skybox[0];
+            }
+            
         }
     }
 
