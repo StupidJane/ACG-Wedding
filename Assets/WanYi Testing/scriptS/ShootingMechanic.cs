@@ -82,6 +82,7 @@ public class ShootingMechanic : MonoBehaviour
         arrowRigidbody.AddForce(arrowDirection * arrowSpeed, ForceMode.Impulse);
     }*/
 
+
     public Transform camTransform;
     public GameObject arrowPrefab;
     public Transform arrowSpawnPoint;  // the arrow prefab's game object
