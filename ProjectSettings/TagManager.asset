@@ -7,6 +7,7 @@ TagManager:
   - CinemachineTarget
   - Balloon
   - Arrow
+  - Collectable
   layers:
   - Default
   - TransparentFX

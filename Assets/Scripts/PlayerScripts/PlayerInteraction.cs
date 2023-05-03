@@ -10,6 +10,9 @@ public class PlayerInteraction : MonoBehaviour
 
     public Material[] skybox;
 
+
+    public GameObject Confetti;
+
     void Start()
     {
         Cam = Camera.main.transform;
@@ -43,6 +46,16 @@ public class PlayerInteraction : MonoBehaviour
         {
             print(hit.collider.name);
             
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Collectable"))
+        {
+            Destroy(other.gameObject);
+            Instantiate(Confetti,transform.position + new Vector3(1f, 3f, 1f), Quaternion.identity);
+
         }
     }
 
