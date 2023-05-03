@@ -42460,12 +42460,12 @@ PrefabInstance:
     - target: {fileID: 7534678255084484434, guid: 7d7123000f5b17f438e1b195e3243f43,
         type: 3}
       propertyPath: sensX
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7534678255084484434, guid: 7d7123000f5b17f438e1b195e3243f43,
         type: 3}
       propertyPath: sensY
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7534678255084484434, guid: 7d7123000f5b17f438e1b195e3243f43,
         type: 3}
