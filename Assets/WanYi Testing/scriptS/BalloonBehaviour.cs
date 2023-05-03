@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BalloonBehaviour : MonoBehaviour
 {
-    public BalloonSpawning balloonSpawning; 
+    public BalloonSpawning balloonSpawning;
 
     private void OnCollisionEnter(Collision collision)
     {

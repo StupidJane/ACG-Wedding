@@ -105,6 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a7e0deb23f5654cbab0508e65de22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  balloonSpawning: {fileID: 0}
+  destroyParticleEffect: {fileID: 188560, guid: 9c3b7f4ace8832b40abe6afe89fbcd91,
+    type: 3}
 --- !u!1 &4812968858987002188
 GameObject:
   m_ObjectHideFlags: 0
