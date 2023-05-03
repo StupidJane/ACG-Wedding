@@ -330,8 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1749dceb66312354a9d94b639cd3aeb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyParticleEffect: {fileID: 188560, guid: 9c3b7f4ace8832b40abe6afe89fbcd91,
-    type: 3}
+  destroyParticleEffect: {fileID: 0}
 --- !u!1 &2546788667378248636
 GameObject:
   m_ObjectHideFlags: 0
